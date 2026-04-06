@@ -1,6 +1,8 @@
 import react from 'react'
 import './App.css'
-import Navbar from './Components/Navbar.jsx'
+import Navbar from './Components/Navbar.jsx';
+import Category from './Components/Category.jsx';
+
 function App() {
 
 
@@ -8,7 +10,8 @@ function App() {
     <>
     <div>
       <Navbar/>
-      <h1 className='text-center text-3xl'>Hellow Juned</h1>
+      <Category/>
+      
     </div>
     </>
   )
