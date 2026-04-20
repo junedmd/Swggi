@@ -10,6 +10,11 @@ const PORT =5000;
 import Categories from "./routes/Categories.js";
 import connectDB from "./config/db.js";
 
+app.use(cors({
+  origin: ['http://localhost:5173', "https://swggi.vercel.app" ],
+  methods: ['GET', 'POST' ,'DELETE'],
+  credentials: true
+}));
 
 // api Routes//
 
