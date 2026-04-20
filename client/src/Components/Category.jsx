@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+const API = import.meta.env.VITE_API_URL;
 
 export default function Category() {
 
@@ -17,7 +17,7 @@ export default function Category() {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios("api/categories");
+            const response = await axios(`${API}/api/categories`);
             setData(response.data.data);
             console.log(response.data.data);
         } catch (e) {
