@@ -3,7 +3,7 @@ import Category from "../models/Categories.js";
 // CREATE CATEGORY (upload image + save data)
 export const createCategory = async (req, res) => {
   try {
-    const { name, description } = req.body;
+    const { name, image } = req.body;
 
     // upload image to cloudinary
 
