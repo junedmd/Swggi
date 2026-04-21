@@ -4,6 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from 'react';
 import { useEffect } from 'react';
+import dotenv from "dotenv";
 const API = import.meta.env.VITE_API_URL;
 
 export default function Category() {
