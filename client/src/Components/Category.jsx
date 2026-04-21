@@ -18,7 +18,7 @@ export default function Category() {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios(`${API}/api/categories`);
+            const response = await axios(`https://swggiy-a1kj.onrender.com/api/categories`);
             setData(response.data.data);
             console.log(response.data.data);
         } catch (e) {
