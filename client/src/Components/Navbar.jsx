@@ -44,7 +44,7 @@ export default function Navbar() {
     ]
     return (
         <>
-            <div className='black-overlay w-full h-full fixed duration-500' onClick={hideSideMenu} style={{ opacity: toggle ? 1 : 0, visibility: toggle ? "visible" : "hidden" }} >
+            <div className='black-overlay w-full h-full fixed duration-500 bg-white' onClick={hideSideMenu} style={{ opacity: toggle ? 1 : 0, visibility: toggle ? "visible" : "hidden" }} >
 
             </div>
             <div className='w-120 bg-white h-full absolute duration-700' style={{ left: toggle ? "0%" : "-100%" }}>
