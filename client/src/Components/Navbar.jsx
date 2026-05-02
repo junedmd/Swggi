@@ -50,7 +50,7 @@ export default function Navbar() {
             <div className='w-120 bg-white h-full absolute duration-700' style={{ left: toggle ? "0%" : "-100%" }}>
 
             </div>
-            <div className='p-4 shadow-xl text-[#686b78]'>
+            <div className='p-4 shadow-xl text-[#686b78] bg-white'>
                 <div className='max-w-300 mx-auto  flex items-center'>
 
                     <div className='w-25'>
