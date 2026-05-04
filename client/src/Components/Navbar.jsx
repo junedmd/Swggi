@@ -88,7 +88,7 @@ export default function Navbar() {
         </div>
 
         {/* navbar */}
-            <div className='p-4 shadow-md text-[#686b78] bg-white'>
+            <div className='p-2 shadow-md text-[#686b78] bg-white'>
                 <div className='max-w-300 mx-auto  flex items-center'>
 
                     <div className='w-20 md:w-24'>

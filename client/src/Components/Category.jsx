@@ -54,10 +54,10 @@ export default function Category() {
             <div className='flex my-3 items-center justify-between'>
 
 
-                <div className='text-3xl'>
+                <div className='text-2xl sm:text-2xl'>
                     What's on Your Minds?
                 </div>
-                <div className='flex my-3 '>
+                <div className='flex my-2 sm:my-4 '>
                     <div className=' flex justify-center items-center w-7.5 h-7.5 bg-[#e2e2e7] rounded-full mx-2' onClick={preSlide} >
                         <FaArrowLeft  />
                     </div>
@@ -75,8 +75,8 @@ export default function Category() {
                 {
                     data.map((item) => {
                         return (
-                            <div style={{transform:`translateX(-${slide * 100}%)`}}  key={item._id} className="min-w-50 ">
-                                <img src={item.image}  className='w-50 h-50 object-cover  mx-auto' />
+                            <div style={{transform:`translateX(-${slide * 100}%)`}}  key={item._id} className="min-w-25 sm:min-w-50 ">
+                                <img src={item.image}  className='w-30 sm:w-39 sm:h-50 h-37 object-cover  mx-auto' />
                             </div>
                         )
 
