@@ -9,9 +9,9 @@ function Login() {
             <Navbar/>
                 
 
-            <div className='border-box flex justify-center items-center px-4 py-6'>
+            <div className='border-box flex justify-center items-center px-4 py-3 my-4'>
                 
-                <div className=' w-[80%] sm:w-full max-w-md bg-white p-8 sm:p-6 border rounded-2xl'>
+                <div className=' w-[80%] sm:w-full max-w-md bg-white p-5 sm:p-6 border rounded-2xl'>
 
 
                     <h1 className=' text-2xl sm:text-3xl font-semibold mb-0 text-center '>Login </h1>

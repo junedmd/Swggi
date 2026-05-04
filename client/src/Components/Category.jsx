@@ -4,6 +4,9 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useRef } from 'react';
+   
+
 import dotenv from "dotenv";
 const API = import.meta.env.VITE_API_URL;
 
@@ -12,7 +15,7 @@ export default function Category() {
     const [slide, setSlide]=useState(1);
 
     const [data, setData] = useState([]);
-
+   const scrollRef = useRef(null);
 
     
 
@@ -31,51 +34,25 @@ export default function Category() {
         fetchCategories();
     }, [])
 
-    const nextSlide=()=>{
-        console.log(data.length);
-
-        if(data.length-6 == slide)return false;
-        setSlide(slide + 1);
-
-        
-
-    };
-    const preSlide=()=>{
-
-        if(slide==0) return false;
-        setSlide(slide - 1);
-     
-
-    }
+   
 
 
     return (
-        <div className='max-w-300 mx-auto'>
+        <div className='max-w-400 mx-auto'>
             <div className='flex my-3 items-center justify-between'>
 
 
-                <div className='text-2xl sm:text-2xl'>
+                <div className='text-2xl sm:text-2xl pl-5'>
                     What's on Your Minds?
                 </div>
-                <div className='flex my-2 sm:my-4 '>
-                    <div className=' flex justify-center items-center w-7.5 h-7.5 bg-[#e2e2e7] rounded-full mx-2' onClick={preSlide} >
-                        <FaArrowLeft  />
-                    </div>
-                    <div className='flex justify-center items-center w-7.5 h-7.5 bg-[#e2e2e7] rounded-full mx-2' onClick={nextSlide}>
-                        <FaArrowRight />
-                    </div>
-
-                </div>
-
-
-
+                
 
             </div>
-            <div className='flex  p-2 overflow-hidden'>
+            <div className='flex p-2 overflow-x-auto scroll-smooth' style={{ scrollbarWidth: 'none' }}>
                 {
                     data.map((item) => {
                         return (
-                            <div style={{transform:`translateX(-${slide * 100}%)`}}  key={item._id} className="min-w-25 sm:min-w-50 ">
+                            <div   key={item._id} className="min-w-25 sm:min-w-50 ">
                                 <img src={item.image}  className='w-30 sm:w-39 sm:h-50 h-37 object-cover  mx-auto' />
                             </div>
                         )
